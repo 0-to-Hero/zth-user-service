@@ -1,0 +1,16 @@
+version: "3"
+services:
+  db:
+    image: mysql:5.7
+    platform: linux/x86_64
+    environment:
+      MYSQL_DATABASE: "db"
+      MYSQL_USER: "jpauser"
+      MYSQL_PASSWORD: "jpapwd"
+      MYSQL_ROOT_PASSWORD: "pwd"
+    ports:
+      - 3306:3306
+    volumes:
+      - mysqldb:/var/lib/mysql
+volumes:
+  mysqldb:

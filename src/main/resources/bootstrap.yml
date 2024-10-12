@@ -1,0 +1,17 @@
+server:
+  port: 8002
+spring:
+  profiles:
+    active:
+      - default
+  application:
+    name: zth-user-service
+  cloud:
+    config:
+      uri: http://localhost:8001
+
+management:
+  endpoint:
+    web:
+      exposure:
+        include: "*"
