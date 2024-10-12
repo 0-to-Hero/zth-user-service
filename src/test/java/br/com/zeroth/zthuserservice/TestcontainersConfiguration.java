@@ -1,4 +1,4 @@
-package br.com.zeroth.zth_user_service;
+package br.com.zeroth.zthuserservice;
 
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;

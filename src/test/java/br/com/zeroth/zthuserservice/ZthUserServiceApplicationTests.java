@@ -1,4 +1,4 @@
-package br.com.zeroth.zth_user_service;
+package br.com.zeroth.zthuserservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
