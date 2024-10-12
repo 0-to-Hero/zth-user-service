@@ -5,7 +5,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.io.Serializable;
 
@@ -28,9 +33,17 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotBlank(message = "Name is mandatory")
     private String name;
+
+    @NotBlank(message = "Password is mandatory")
+    @Size(min = 6, max = 132)
     private String password;
+
+    @NotBlank(message = "Email is mandatory")
     private String email;
+
     private String latitude;
     private String longitude;
 
